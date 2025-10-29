@@ -1,3 +1,4 @@
 #Cmake constructions
 build/
 install/
+log/
