@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'Voice'
+package_name = 'voice'
 
 setup(
     name=package_name,
@@ -25,8 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             # Aquí agregamos tus nodos
-            'voice_talker = Voice.voice_talker:main',
-            'voice_listener = Voice.voice_listener:main',
+            'voice_talker = voice.voice_talker:main',
+            'voice_listener = voice.voice_listener:main',
         ],
     },
 )
