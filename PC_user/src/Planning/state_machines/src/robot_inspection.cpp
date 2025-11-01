@@ -15,103 +15,76 @@ enum SMState
     SM_NAVIGATE_TO_INSPECTION,
     SM_WAIT_FOR_COMMAND,
     SM_NAVIGATE_TO_EXIT,
-    SM_FINAL_STATE
+    SM_FINAL
 };
 
 int main(int argc, char **argv)
 {
-    std::cout << "INITIALIZING ROBOT INSPECTION..." << std::endl;
+    std::cout << "=== INITIALIZING ROBOT INSPECTION ===" << std::endl;
 
     rclcpp::init(argc, argv);
     auto node = rclcpp::Node::make_shared("robot_inspection");
 
-    //JustinaTools singletons
-    auto justina_hri       = JustinaHRI::getInstance(node);
-    auto justina_nav       = JustinaNavigation::getInstance(node);
-    auto justina_knowledge = JustinaKnowledge::getInstance(node);
+    auto hri = std::make_shared<JustinaHRI>(node);
+    auto nav = std::make_shared<JustinaNavigation>(node);
+    auto knowledge = std::make_shared<JustinaKnowledge>(node);
 
     rclcpp::Rate loop(10);
-
     SMState state = SM_INIT;
-    std::vector<float> goal_vec(3);
-    std::string recog;
-    bool success = false;
 
-    justina_hri->say(" ", 1);
+    std::vector<float> goal(3);
+    std::string command;
+    bool finished = false;
 
-    while (rclcpp::ok() && !success)
+    while (rclcpp::ok() && !finished)
     {
         switch (state)
         {
             case SM_INIT:
-                std::cout << "[SM_INIT] Robot ready for inspection" << std::endl;
-                justina_hri->say("I am ready for robot inspection", 3);
+                std::cout << "[SM_INIT]" << std::endl;
+                hri->say("I am ready for robot inspection", 3);
                 state = SM_NAVIGATE_TO_INSPECTION;
                 break;
 
             case SM_NAVIGATE_TO_INSPECTION:
-                std::cout << "[SM_NAVIGATE_TO_INSPECTION] Moving to inspection point" << std::endl;
-                justina_hri->say("I am going to the inspection point", 3);
+                std::cout << "[SM_NAVIGATE_TO_INSPECTION]" << std::endl;
+                hri->say("I am going to the inspection point", 3);
                 rclcpp::sleep_for(std::chrono::seconds(3));
 
-                goal_vec = justina_knowledge->CoordenatesLocSrv("entrance_door");
-                std::cout << "Inspection point coordinates: x=" << goal_vec[0]
-                          << ", y=" << goal_vec[1]
-                          << ", a=" << goal_vec[2] << std::endl;
+                goal = knowledge->getCoordinates("entrance_door");
+                nav->getClose(goal[0], goal[1], goal[2], 120000);
 
-                if (!justina_nav->getClose(goal_vec[0], goal_vec[1], goal_vec[2], 120000))
-                    std::cout << "Cannot move to inspection point" << std::endl;
-
-                justina_hri->say("I have arrived at the inspection point", 1);
+                hri->say("I have arrived at the inspection point", 1);
                 rclcpp::sleep_for(std::chrono::seconds(2));
-                justina_hri->say("Please tell me to continue to the exit", 3);
-                rclcpp::sleep_for(std::chrono::seconds(2));
-
+                hri->say("Please tell me to continue to the exit", 3);
                 state = SM_WAIT_FOR_COMMAND;
                 break;
 
             case SM_WAIT_FOR_COMMAND:
-                std::cout << "[SM_WAIT_FOR_COMMAND] Waiting for command" << std::endl;
-                recog = justina_hri->lastRecogSpeech("test.json");
+                std::cout << "[SM_WAIT_FOR_COMMAND]" << std::endl;
+                command = hri->lastRecognizedSpeech("test.json");
 
-                if (recog != "continue")
-                {
-                    std::cout << "Heard: " << recog << ", waiting..." << std::endl;
-                }
-                else
-                {
-                    std::cout << "Heard: " << recog << ", proceeding to exit" << std::endl;
+                if (command == "continue")
                     state = SM_NAVIGATE_TO_EXIT;
-                }
+
                 break;
 
             case SM_NAVIGATE_TO_EXIT:
-                std::cout << "[SM_NAVIGATE_TO_EXIT] Moving to exit point" << std::endl;
-                justina_hri->say("I am going to the exit point", 3);
+                std::cout << "[SM_NAVIGATE_TO_EXIT]" << std::endl;
+                hri->say("I am going to the exit point", 3);
                 rclcpp::sleep_for(std::chrono::milliseconds(500));
 
-                goal_vec = justina_knowledge->CoordenatesLocSrv("inspection_point");
-                std::cout << "Exit point coordinates: x=" << goal_vec[0]
-                          << ", y=" << goal_vec[1]
-                          << ", a=" << goal_vec[2] << std::endl;
+                goal = knowledge->getCoordinates("inspection_point");
+                nav->getClose(goal[0], goal[1], goal[2], 180000);
 
-                if (!justina_nav->getClose(goal_vec[0], goal_vec[1], goal_vec[2], 180000))
-                {
-                    justina_hri->say("Cannot move to exit point", 3);
-                    break;
-                }
-
-                state = SM_FINAL_STATE;
+                state = SM_FINAL;
                 break;
 
-            case SM_FINAL_STATE:
-                std::cout << "[SM_FINAL_STATE] Test finished" << std::endl;
-                justina_hri->say("I have finished the test", 3);
+            case SM_FINAL:
+                std::cout << "[SM_FINAL]" << std::endl;
+                hri->say("I have finished the test", 3);
                 rclcpp::sleep_for(std::chrono::seconds(1));
-                success = true;
-                break;
-
-            default:
+                finished = true;
                 break;
         }
 
@@ -122,3 +95,4 @@ int main(int argc, char **argv)
     rclcpp::shutdown();
     return 0;
 }
+
