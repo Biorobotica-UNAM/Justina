@@ -4,7 +4,7 @@
   <version>0.1.0</version>
   <description>State machines for RoboCup@HOME 2026</description>
   <maintainer email="marco.Soriano5102@comunidad.unam.mx">Marco Soriano</maintainer>
-  <license>BSD-3-Clause</license>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
@@ -12,8 +12,7 @@
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>robotino_msgs</depend>
-  <depend>festino_tools</depend>
-
+  <depend>justina_tools</depend>
   <depend>nlohmann_json</depend>
 
   <export>
