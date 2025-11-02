@@ -18,7 +18,8 @@ def generate_launch_description():
     sample_rate = 44100
     speech_service = "/speech_recognition"
     grammar_path = os.path.join(pkg_share, "grammar")  # tu carpeta grammar
-
+    input_device_index = 3
+    
     return LaunchDescription(
         [
             Node(
@@ -33,6 +34,7 @@ def generate_launch_description():
                         "sample_rate": sample_rate,
                         "speech_service": speech_service,
                         "grammar_path": grammar_path,
+                        "input_device_index": input_device_index,
                     }
                 ],
             )

@@ -23,6 +23,8 @@ ament_export_dependencies(rosidl_default_runtime)
 # Instalar el nodo Python
 install(PROGRAMS
   src/speech_recognizer.py
+  src/speech_client.py
+  tools/speech_recognizer_tool.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
