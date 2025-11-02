@@ -37,8 +37,9 @@ class SpeechSpeaker(Node):
         self.get_logger().info(f"Speaking: '{text}'")
         if self._enable:
             self._speak(text)
-            # Publicar que terminó
-            self._status_pub.publish(Bool(data=True))
+
+        # Publicar que terminó de hablar
+        self._status_pub.publish(Bool(data=True))
 
     def _speak(self, text: str) -> None:
         try:
@@ -68,3 +69,4 @@ def main(args=None) -> None:
 
 if __name__ == "__main__":
     main()
+
