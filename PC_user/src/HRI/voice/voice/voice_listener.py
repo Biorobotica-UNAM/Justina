@@ -1,45 +1,40 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String, Bool
+from std_msgs.msg import String
 import subprocess
 
-speech_topic = "voice/speech"
-speech_status_topic = "voice/speech_status"
-queue_size = 50
+listen_topic: str = "robot_voice"
+queue_size: int = 50 
 
-class SpeechSpeaker(Node):
+class RoboListener(Node):
+
     def __init__(self) -> None:
-        super().__init__("speech_speaker")
+        super().__init__("robo_listener")
 
-        # Parámetros configurables
+        #TODO: DECLARE CONFIGURABLE PARAMETERS
         self.declare_parameter("enable_tts", True)
-        self.declare_parameter("tts_voice", "en-us+f2")  # Voz de mujer
-        self.declare_parameter("tts_speed", 190)          # Velocidad de voz
+        self.declare_parameter("tts_voice", "en-us+f2") #VOZ DE MUJER
+        self.declare_parameter("tts_speed", 190) # VELOCIDAD DE VOZ
 
-        # Cargar parámetros
+        #TODO: HERE WE LOAD THE PARAMETERS
         self._enable: bool = bool(self.get_parameter("enable_tts").value)
         self._voice: str = str(self.get_parameter("tts_voice").value)
         self._speed: int = int(self.get_parameter("tts_speed").value)
+        self.get_logger().info(f"Listener started. Voice: {self._voice}, Speed: {self._speed}")
 
-        self._speech_sub = self.create_subscription(String, speech_topic, self._on_message, queue_size)
-        self._status_pub = self.create_publisher(Bool, speech_status_topic, queue_size)
-
-        self.get_logger().info(f"SpeechSpeaker started. Voice: {self._voice}, Speed: {self._speed}")
+        #TODO: SUBSCRIBE TO TOPIC
+        self.subscription = self.create_subscription(String, listen_topic, self._on_message, queue_size)
 
     def _on_message(self, msg: String) -> None:
         text = msg.data.strip()
         if not text:
-            self.get_logger().warn("Received empty text, ignoring")
+            self.get_logger().warn("Empty message received, ignored")
             return
-
-        self.get_logger().info(f"Speaking: '{text}'")
+        self.get_logger().info(f"Received: '{text}'")
         if self._enable:
             self._speak(text)
-
-        # Publicar que terminó de hablar
-        self._status_pub.publish(Bool(data=True))
 
     def _speak(self, text: str) -> None:
         try:
@@ -50,18 +45,18 @@ class SpeechSpeaker(Node):
                 text
             ], check=True)
         except FileNotFoundError:
-            self.get_logger().error("espeak-ng not found. Install it to use TTS.")
+            self.get_logger().error("Not found 'espeak-ng'. Install it to use TTS.")
         except subprocess.CalledProcessError as exc:
             self.get_logger().error(f"Error executing espeak-ng: {exc}")
 
 
 def main(args=None) -> None:
     rclpy.init(args=args)
-    node = SpeechSpeaker()
+    node = RoboListener()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        node.get_logger().info("SpeechSpeaker stopped by keyboard.")
+        node.get_logger().info("Justina stopped by keyboard.")
     finally:
         node.destroy_node()
         rclpy.shutdown()
@@ -69,4 +64,3 @@ def main(args=None) -> None:
 
 if __name__ == "__main__":
     main()
-
