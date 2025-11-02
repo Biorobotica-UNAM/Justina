@@ -5,8 +5,8 @@
 #include <iostream>
 
 #include "rclcpp/rclcpp.hpp"
-#include "JustinaHRI.h"
-#include "JustinaNavigation.h"
+#include "justina_tools/JustinaHRI.h"
+#include "justina_tools/JustinaNavigation.h"
 
 enum SMState
 {

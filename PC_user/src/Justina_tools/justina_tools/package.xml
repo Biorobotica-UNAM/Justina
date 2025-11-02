@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>justina_tools</name>
-  <version>0.0.1</version>
-  <description>Justina tools</description>
-
+  <version>0.1.0</version>
+  <description>Justina Tools</description>
   <maintainer email="marco.soriano5102@comunidad.unam.mx">Marco Soriano</maintainer>
   <license>MIT</license>
 
@@ -11,19 +10,11 @@
 
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
-  <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
-  <depend>nav_msgs</depend>
-  <depend>tf2</depend>
-  <depend>tf2_ros</depend>
-  <depend>tf2_geometry_msgs</depend>
-  <depend>std_srvs</depend>
-  <depend>vision_msgs</depend>
-  <depend>cv_bridge</depend>
-  <depend>image_transport</depend>
-  <depend>vosk_speech_recognition</depend>
+  <depend>robotino_msgs</depend>
+  <depend>nlohmann_json</depend>
 
   <export>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
-
