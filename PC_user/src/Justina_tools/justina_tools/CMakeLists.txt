@@ -18,7 +18,7 @@ include_directories(
   ${robotino_msgs_INCLUDE_DIRS}
 )
 
-add_library(justina_tools
+add_library(justina_tools SHARED
   src/JustinaHRI.cpp
   src/JustinaHardware.cpp
   src/JustinaNavigation.cpp
@@ -38,11 +38,10 @@ install(DIRECTORY include/
 )
 
 install(TARGETS justina_tools
-  DESTINATION lib/${PROJECT_NAME}
+  DESTINATION lib
 )
 
 ament_export_include_directories(include)
 ament_export_libraries(justina_tools)
 
 ament_package()
-
