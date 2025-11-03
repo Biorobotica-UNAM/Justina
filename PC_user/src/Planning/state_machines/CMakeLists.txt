@@ -8,6 +8,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(robotino_msgs REQUIRED)
+find_package(vosk_speech_recognition REQUIRED)
 find_package(justina_tools REQUIRED)
 
 include_directories(
@@ -16,6 +17,7 @@ include_directories(
   ${std_msgs_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS}
   ${robotino_msgs_INCLUDE_DIRS}
+  ${vosk_speech_recognition_INCLUDE_DIRS}
   ${justina_tools_INCLUDE_DIRS}
 )
 
@@ -26,6 +28,7 @@ ament_target_dependencies(robot_inspection
   std_msgs
   geometry_msgs
   robotino_msgs
+  vosk_speech_recognition
   justina_tools
 )
 

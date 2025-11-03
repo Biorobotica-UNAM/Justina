@@ -13,6 +13,7 @@
   <depend>geometry_msgs</depend>
   <depend>robotino_msgs</depend>
   <depend>nlohmann_json</depend>
+  <depend>vosk_speech_recognition</depend>
 
   <export>
     <build_type>ament_cmake</build_type>

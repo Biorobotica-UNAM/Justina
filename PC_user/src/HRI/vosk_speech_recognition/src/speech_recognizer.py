@@ -20,7 +20,7 @@ class VoskSpeechRecognizer(Node):
         # Parametros
         self.language = self.declare_parameter("language", "en").value
         self.model_path = self.declare_parameter("model_path", "model").value
-        self.sample_rate = self.declare_parameter("sample_rate", 16000).value
+        self.sample_rate = self.declare_parameter("sample_rate", 48000).value
         self.grammar_path = self.declare_parameter("grammar_path", "").value
         self.service_name = self.declare_parameter(
             "speech_service", "speech_recognition"
@@ -76,7 +76,7 @@ class VoskSpeechRecognizer(Node):
             rate=rate,
             input=True,
             frames_per_buffer=4096,
-            input_device_index=3,
+            input_device_index=9,
         )
         return audio, stream
 

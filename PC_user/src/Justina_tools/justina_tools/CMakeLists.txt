@@ -9,6 +9,7 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(robotino_msgs REQUIRED)
 find_package(nlohmann_json REQUIRED)
+find_package(vosk_speech_recognition REQUIRED)
 
 include_directories(
   include
@@ -31,6 +32,7 @@ ament_target_dependencies(justina_tools
   geometry_msgs
   robotino_msgs
   nlohmann_json
+  vosk_speech_recognition
 )
 
 install(DIRECTORY include/
