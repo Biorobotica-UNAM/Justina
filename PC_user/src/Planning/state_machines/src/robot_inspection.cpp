@@ -55,7 +55,9 @@ int main(int argc, char** argv)
 
             case SM_WAIT_FOR_COMMAND:
                 std::cout << "[SM_WAIT_FOR_COMMAND]" << std::endl;
-                recog = hri->lastRecognizedSpeech("test.json");
+                recog = hri->listen("test.json");
+
+                std::cout << recog << std::endl;
 
                 if (recog == "continue")
                 {
