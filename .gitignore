@@ -1,13 +1,10 @@
-#Python extentions 
+#Python
 *.pyc
 
-#Cmake constructions 
+#CMake 
+build/
+install/
+log/
 
-Robotino/build/
-Robotino/install/
-PC_user/build/
-PC_user/install/
-PC_user/log/
-PC_user/.vscode/
-data/
+#VS
 .vscode/
