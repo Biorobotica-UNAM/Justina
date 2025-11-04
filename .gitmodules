@@ -7,3 +7,4 @@
 [submodule "src/Hardware"]
 	path = src/Hardware
 	url = https://github.com/Biorobotica-UNAM/Hardware.git
+	branch = main
