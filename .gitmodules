@@ -4,3 +4,6 @@
 [submodule "src/Navigation"]
 	path = src/Navigation
 	url = https://github.com/Biorobotica-UNAM/Navigation.git
+[submodule "src/Hardware"]
+	path = src/Hardware
+	url = https://github.com/Biorobotica-UNAM/Hardware.git
