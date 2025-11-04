@@ -2,9 +2,9 @@
 *.pyc
 
 #CMake 
-build/
-install/
-log/
+**/build/
+**/install/
+**/log/
 
 #VS
-.vscode/
+**/.vscode/
