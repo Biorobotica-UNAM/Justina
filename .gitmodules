@@ -1,3 +1,6 @@
 [submodule "src/HRI"]
 	path = src/HRI
 	url = https://github.com/Biorobotica-UNAM/HRI.git
+[submodule "src/Navigation"]
+	path = src/Navigation
+	url = https://github.com/Biorobotica-UNAM/Navigation.git
