@@ -14,3 +14,6 @@
 [submodule "src/Interfaces"]
 	path = src/Interfaces
 	url = https://github.com/Biorobotica-UNAM/Interfaces.git
+[submodule "src/Executor"]
+	path = src/Executor
+	url = https://github.com/Biorobotica-UNAM/Executor.git
