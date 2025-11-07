@@ -17,3 +17,6 @@
 [submodule "src/Executor"]
 	path = src/Executor
 	url = https://github.com/Biorobotica-UNAM/Executor.git
+[submodule "src/Planning"]
+	path = src/Planning
+	url = https://github.com/Biorobotica-UNAM/Planning.git
