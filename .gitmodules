@@ -1,9 +1,11 @@
 [submodule "src/HRI"]
 	path = src/HRI
 	url = https://github.com/Biorobotica-UNAM/HRI.git
+	branch = main
 [submodule "src/Navigation"]
 	path = src/Navigation
 	url = https://github.com/Biorobotica-UNAM/Navigation.git
+	branch = main
 [submodule "src/Hardware"]
 	path = src/Hardware
 	url = https://github.com/Biorobotica-UNAM/Hardware.git
@@ -11,12 +13,16 @@
 [submodule "src/surge_et_ambula"]
 	path = src/surge_et_ambula
 	url = https://github.com/Biorobotica-UNAM/surge_et_ambula.git
+	branch = main
 [submodule "src/Interfaces"]
 	path = src/Interfaces
 	url = https://github.com/Biorobotica-UNAM/Interfaces.git
+	branch = main
 [submodule "src/Executor"]
 	path = src/Executor
 	url = https://github.com/Biorobotica-UNAM/Executor.git
+	branch = main
 [submodule "src/Planning"]
 	path = src/Planning
 	url = https://github.com/Biorobotica-UNAM/Planning.git
+	branch = carry_test
