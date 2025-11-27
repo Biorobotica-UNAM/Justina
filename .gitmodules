@@ -25,4 +25,4 @@
 [submodule "src/Planning"]
 	path = src/Planning
 	url = https://github.com/Biorobotica-UNAM/Planning.git
-	branch = carry_test
+	branch = main
