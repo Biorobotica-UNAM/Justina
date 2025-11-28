@@ -26,3 +26,7 @@
 	path = src/Planning
 	url = https://github.com/Biorobotica-UNAM/Planning.git
 	branch = main
+[submodule "src/Manipulation"]
+	path = src/Manipulation
+	url = https://github.com/Biorobotica-UNAM/Manipulation.git
+	branch = main
