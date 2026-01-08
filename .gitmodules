@@ -30,3 +30,6 @@
 	path = src/Manipulation
 	url = https://github.com/Biorobotica-UNAM/Manipulation.git
 	branch = main
+[submodule "src/Vision"]
+	path = src/Vision
+	url = https://github.com/Biorobotica-UNAM/Vision.git
