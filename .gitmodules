@@ -33,3 +33,4 @@
 [submodule "src/Vision"]
 	path = src/Vision
 	url = https://github.com/Biorobotica-UNAM/Vision.git
+	branch = main
