@@ -1,8 +1,8 @@
-# PumasLogistics
-This is the official repository of Team Pumas, participants in the RoboCup Logistics League.
+# Pumas@HOME
+This is the official repository of Team Pumas' Robot Justina for the RoboCup@HOME.
 
 # Install
-After copying the repository, run inside the repository folder _~/PumasLogistics/_:
+After copying the repository, run inside the repository folder _~/Justina/_:
 ```bash
 git submodule update --init --recursive
 ```
@@ -12,8 +12,8 @@ This clone all submodules git, for example _freenect_stack_
 To install all the dependencies needed for the Justina_temp project, follow these steps:
 1. Go to the main folder of the repository (or clone it if you don't have it yet):
 ```bash
-git clone https://github.com/PumasFestino/PumasLogistics.git
-cd PumasLogistics
+git clone https://github.com/Biorobotica-UNAM/Justina.git
+cd Justina
 ```
 2. Give the installation script execution permissions:
 ```bash
