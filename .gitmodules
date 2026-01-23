@@ -82,6 +82,10 @@
 	url = git@github.com:Biorobotica-UNAM/object_recognizer.git
 
 ####    Planning    ####
+[submodule "src/Planning/planning_tools"]
+	path = src/Planning/planning_tools
+	url = git@github.com:Biorobotica-UNAM/planning_tools.git
+	branch = main
 [submodule "src/Planning/clips"]
 	path = src/Planning/clips
 	url = git@github.com:Biorobotica-UNAM/clips.git
