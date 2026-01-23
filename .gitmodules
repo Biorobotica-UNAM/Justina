@@ -112,5 +112,5 @@
 	branch = main
 [submodule "src/HRI/hri_tools"]
 	path = src/HRI/hri_tools
-	url = git@github.com:Biorobotica-UNAM/HRI.git
+	url = git@github.com:Biorobotica-UNAM/hri_tools.git
 	branch = main
