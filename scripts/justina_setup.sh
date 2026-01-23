@@ -19,6 +19,7 @@ sudo touch $RULES_FILE
 sudo tee $RULES_FILE > /dev/null << EOF
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A900fDgq", SYMLINK+="justinaRightArm", MODE="0666"
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A7005LgE", SYMLINK+="justinaHead", MODE="0666"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="15d1", ATTRS{idProduct}=="0000", SYMLINK+="lidar", MODE="0666"
 EOF
 
 # Recargar reglas
@@ -54,11 +55,13 @@ sudo apt install -y \
   ros-jazzy-nav2-amcl \
   ros-jazzy-xacro \
   ros-jazzy-nav2-lifecycle-manager \
-  espeak-ng \
-  nlohmann-json3-dev \
   ros-jazzy-urg-node \
   ros-jazzy-depth-image-proc \
-  ros-jazzy-camera-info-manager
+  ros-jazzy-camera-info-manager \
+  ros-jazzy-tf-transformations \
+  espeak-ng \
+  nlohmann-json3-dev \
+  portaudio19-dev
 
 cd /tmp
 git clone https://github.com/OpenKinect/libfreenect.git
@@ -68,5 +71,8 @@ cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
 make
 sudo make install
 sudo ldconfig
+
+# Instalar dependencias de Python
+pip3 install openai clipspy vosk pyaudio noisereduce --break-system-packages
 
 echo "Instalación completada correctamente."
