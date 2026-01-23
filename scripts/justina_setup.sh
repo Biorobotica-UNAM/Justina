@@ -54,6 +54,19 @@ sudo apt install -y \
   ros-jazzy-nav2-amcl \
   ros-jazzy-xacro \
   ros-jazzy-nav2-lifecycle-manager \
-  espeak-ng
+  espeak-ng \
+  nlohmann-json3-dev \
+  ros-jazzy-urg-node \
+  ros-jazzy-depth-image-proc \
+  ros-jazzy-camera-info-manager
+
+cd /tmp
+git clone https://github.com/OpenKinect/libfreenect.git
+cd libfreenect
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
+make
+sudo make install
+sudo ldconfig
 
 echo "Instalación completada correctamente."
