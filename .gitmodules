@@ -44,6 +44,9 @@
 	branch = main
 
 ####    Manipulation    ####
+[submodule "src/Manipulation/manipulation_tools"]
+	path = src/Manipulation/manipulation_tools
+	url = git@github.com:Biorobotica-UNAM/manipulation_tools.git
 [submodule "src/Manipulation/manipulation_planner"]
 	path = src/Manipulation/manipulation_planner
 	url = git@github.com:Biorobotica-UNAM/manipulation_planner.git
