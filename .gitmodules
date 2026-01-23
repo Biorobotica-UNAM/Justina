@@ -57,9 +57,9 @@
 	branch = freq_testing
 
 ####    HRI    ####
-[submodule "src/HRI"]
+[submodule "src/HRI/tools"]
 	path = src/HRI/hri_tools
-	url = git@github.com:Biorobotica-UNAM/HRI.git
+	url = git@github.com:Biorobotica-UNAM/hri_tools.git
 	branch = main
 [submodule "src/HRI/talker"]
 	path = src/HRI/talker
