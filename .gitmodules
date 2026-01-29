@@ -2,7 +2,7 @@
 [submodule "src/Interfaces"]
 	path = src/Interfaces
 	url = git@github.com:Biorobotica-UNAM/Interfaces.git
-	branch = dev_executor
+	branch = main
 
 ####    Hardware    ####
 [submodule "src/Hardware/hardware_tools"]
