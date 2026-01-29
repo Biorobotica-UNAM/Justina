@@ -110,3 +110,6 @@
 	path = src/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
 	branch = main
+[submodule "src/Hardware/virtual_envs"]
+	path = src/Hardware/virtual_envs
+	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
