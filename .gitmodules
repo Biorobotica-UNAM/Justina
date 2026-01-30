@@ -98,6 +98,10 @@
 	path = src/Planning/clips
 	url = git@github.com:Biorobotica-UNAM/clips.git
 	branch = main
+[submodule "src/Planning/semantic_parser"]
+	path = src/Planning/semantic_parser
+	url = git@github.com:Biorobotica-UNAM/semantic_parser.git
+	branch = main
 
 ####    Executor    ####
 [submodule "src/Executor/tasks"]
