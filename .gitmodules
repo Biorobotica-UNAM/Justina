@@ -32,6 +32,10 @@
 	path = src/Hardware/head
 	url = git@github.com:Biorobotica-UNAM/head.git
 	branch = main
+[submodule "src/Hardware/door_detector"]
+	path = src/Hardware/door_detector
+	url = git@github.com:Biorobotica-UNAM/door_detector.git
+	branch = main
 
 ####    Navigation    ####
 [submodule "src/Navigation/navigation_tools"]
