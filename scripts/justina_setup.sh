@@ -59,9 +59,11 @@ sudo apt install -y \
   ros-jazzy-depth-image-proc \
   ros-jazzy-camera-info-manager \
   ros-jazzy-tf-transformations \
+  ros-jazzy-dynamixel-sdk \
   espeak-ng \
   nlohmann-json3-dev \
-  portaudio19-dev
+  portaudio19-dev \
+  flite
 
 cd /tmp
 git clone https://github.com/OpenKinect/libfreenect.git
