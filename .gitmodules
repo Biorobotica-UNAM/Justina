@@ -39,6 +39,7 @@
 [submodule "src/Hardware/virtual_envs"]
 	path = src/Hardware/virtual_envs
 	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
+	branch = main
 
 ####    Navigation    ####
 [submodule "src/Navigation/navigation_tools"]
@@ -58,6 +59,7 @@
 [submodule "src/Manipulation/manipulation_tools"]
 	path = src/Manipulation/manipulation_tools
 	url = git@github.com:Biorobotica-UNAM/manipulation_tools.git
+	branch = main
 [submodule "src/Manipulation/manipulation_planner"]
 	path = src/Manipulation/manipulation_planner
 	url = git@github.com:Biorobotica-UNAM/manipulation_planner.git
@@ -71,6 +73,7 @@
 [submodule "src/HRI/talker"]
 	path = src/HRI/talker
 	url = git@github.com:Biorobotica-UNAM/talker.git
+	branch = main
 [submodule "src/HRI/listener"]
 	path = src/HRI/listener
 	url = git@github.com:Biorobotica-UNAM/listener.git
@@ -88,9 +91,11 @@
 [submodule "src/Vision/face_recognizer"]
 	path = src/Vision/face_recognizer
 	url = git@github.com:Biorobotica-UNAM/face_recognizer.git
+	branch = main
 [submodule "src/Vision/object_recognizer"]
 	path = src/Vision/object_recognizer
 	url = git@github.com:Biorobotica-UNAM/object_recognizer.git
+	branch = main
 
 ####    Planning    ####
 [submodule "src/Planning/planning_tools"]
