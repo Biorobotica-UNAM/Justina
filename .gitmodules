@@ -71,7 +71,7 @@
 [submodule "src/HRI/listener"]
 	path = src/HRI/listener
 	url = git@github.com:Biorobotica-UNAM/listener.git
-	branch = listener_clips
+	branch = main
 [submodule "src/HRI/human_detector"]
 	path = src/HRI/human_detector
 	url = git@github.com:Biorobotica-UNAM/human_detector.git
