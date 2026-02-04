@@ -112,6 +112,10 @@
 	branch = main
 
 ####    Executor    ####
+[submodule "src/Executor/executor_tools"]
+	path = src/Executor/executor_tools
+	url = git@github.com:Biorobotica-UNAM/executor_tools.git
+	branch = main
 [submodule "src/Executor/tasks"]
 	path = src/Executor/tasks
 	url = git@github.com:Biorobotica-UNAM/tasks.git
