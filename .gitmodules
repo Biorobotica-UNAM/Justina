@@ -36,6 +36,9 @@
 	path = src/Hardware/door_detector
 	url = git@github.com:Biorobotica-UNAM/door_detector.git
 	branch = main
+[submodule "src/Hardware/virtual_envs"]
+	path = src/Hardware/virtual_envs
+	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
 
 ####    Navigation    ####
 [submodule "src/Navigation/navigation_tools"]
@@ -114,6 +117,3 @@
 	path = src/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
 	branch = main
-[submodule "src/Hardware/virtual_envs"]
-	path = src/Hardware/virtual_envs
-	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
