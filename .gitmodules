@@ -121,8 +121,8 @@
 	url = git@github.com:Biorobotica-UNAM/task_manager.git
 	branch = Jorge
 
-####    surge_et_ambula    ####
-[submodule "src/surge_et_ambula"]
-	path = src/surge_et_ambula
+####    Supervisor    ####
+[submodule "src/Supervisor/surge_et_ambula"]
+	path = src/Supervisor/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
 	branch = main
