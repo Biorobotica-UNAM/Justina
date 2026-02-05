@@ -105,7 +105,7 @@
 [submodule "src/Planning/clips"]
 	path = src/Planning/clips
 	url = git@github.com:Biorobotica-UNAM/clips.git
-	branch = main
+	branch = HRI_plan
 [submodule "src/Planning/semantic_parser"]
 	path = src/Planning/semantic_parser
 	url = git@github.com:Biorobotica-UNAM/semantic_parser.git
@@ -129,4 +129,16 @@
 [submodule "src/Supervisor/surge_et_ambula"]
 	path = src/Supervisor/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
+	branch = main
+[submodule "src/Supervisor/supervisor_manager"]
+	path = src/Supervisor/supervisor_manager
+	url = git@github.com:Biorobotica-UNAM/supervisor_manager.git
+	branch = main
+[submodule "src/Supervisor/supervisor_plan"]
+	path = src/Supervisor/supervisor_plan
+	url = git@github.com:Biorobotica-UNAM/supervisor_plan.git
+	branch = main
+[submodule "src/Supervisor/supervisor_system"]
+	path = src/Supervisor/supervisor_system
+	url = git@github.com:Biorobotica-UNAM/supervisor_system.git
 	branch = main
