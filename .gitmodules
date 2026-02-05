@@ -123,7 +123,7 @@
 [submodule "src/Executor/task_manager"]
 	path = src/Executor/task_manager
 	url = git@github.com:Biorobotica-UNAM/task_manager.git
-	branch = Jorge
+	branch = main
 
 ####    Supervisor    ####
 [submodule "src/Supervisor/surge_et_ambula"]
