@@ -63,7 +63,7 @@
 [submodule "src/Manipulation/manipulation_planner"]
 	path = src/Manipulation/manipulation_planner
 	url = git@github.com:Biorobotica-UNAM/manipulation_planner.git
-	branch = freq_testing
+	branch = main
 
 ####    HRI    ####
 [submodule "src/HRI/hri_tools"]
