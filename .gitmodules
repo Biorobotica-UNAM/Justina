@@ -24,7 +24,7 @@
 [submodule "src/Hardware/arms"]
 	path = src/Hardware/arms
 	url = git@github.com:Biorobotica-UNAM/arms.git
-	branch = freq_testing
+	branch = main
 [submodule "src/Hardware/kinect_ros2"]
 	path = src/Hardware/kinect_ros2
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
@@ -119,7 +119,7 @@
 [submodule "src/Executor/tasks"]
 	path = src/Executor/tasks
 	url = git@github.com:Biorobotica-UNAM/tasks.git
-	branch = bank
+	branch = main
 [submodule "src/Executor/task_manager"]
 	path = src/Executor/task_manager
 	url = git@github.com:Biorobotica-UNAM/task_manager.git
