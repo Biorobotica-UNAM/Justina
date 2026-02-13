@@ -13,10 +13,10 @@
 	path = src/Hardware/justina_description
 	url = git@github.com:Biorobotica-UNAM/justina_description.git
 	branch = main
-[submodule "src/Hardware/base_interfaces"]
-	path = src/Hardware/base_interfaces
-	url = git@github.com:Biorobotica-UNAM/base_interfaces.git
-	branch = main
+#[submodule "src/Hardware/base_interfaces"]
+#	path = src/Hardware/base_interfaces
+#	url = git@github.com:Biorobotica-UNAM/base_interfaces.git
+#	branch = main
 [submodule "src/Hardware/base"]
 	path = src/Hardware/base
 	url = git@github.com:Biorobotica-UNAM/base.git
