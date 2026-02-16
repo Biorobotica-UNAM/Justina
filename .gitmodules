@@ -32,6 +32,10 @@
 	path = src/Hardware/head
 	url = git@github.com:Biorobotica-UNAM/head.git
 	branch = main
+[submodule "src/Hardware/torso"]
+	path = src/Hardware/torso
+	url = git@github.com:Biorobotica-UNAM/torso.git
+	branch = main
 [submodule "src/Hardware/door_detector"]
 	path = src/Hardware/door_detector
 	url = git@github.com:Biorobotica-UNAM/door_detector.git
