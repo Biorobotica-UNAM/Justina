@@ -4,6 +4,12 @@
 	url = git@github.com:Biorobotica-UNAM/Interfaces.git
 	branch = main
 
+####    Knowledge    ####
+[submodule "src/Knowledge/knowledge_bank"]
+	path = src/Knowledge/knowledge_bank
+	url = git@github.com:Biorobotica-UNAM/knowledge_bank.git
+	branch = main
+
 ####    Hardware    ####
 [submodule "src/Hardware/hardware_tools"]
 	path = src/Hardware/hardware_tools
