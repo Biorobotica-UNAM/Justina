@@ -152,3 +152,6 @@
 	path = src/Supervisor/supervisor_system
 	url = git@github.com:Biorobotica-UNAM/supervisor_system.git
 	branch = main
+[submodule "src/Hardware/base_interfaces"]
+	path = src/Hardware/base_interfaces
+	url = git@github.com:Biorobotica-UNAM/base_interfaces.git
