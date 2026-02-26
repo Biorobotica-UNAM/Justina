@@ -155,3 +155,6 @@
 [submodule "src/Hardware/base_interfaces"]
 	path = src/Hardware/base_interfaces
 	url = git@github.com:Biorobotica-UNAM/base_interfaces.git
+[submodule "src/Supervisor/supervisor_execution"]
+	path = src/Supervisor/supervisor_execution
+	url = git@github.com:Biorobotica-UNAM/supervisor_execution.git
