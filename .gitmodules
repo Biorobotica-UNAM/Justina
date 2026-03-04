@@ -4,6 +4,12 @@
 	url = git@github.com:Biorobotica-UNAM/Interfaces.git
 	branch = main
 
+####    Knowledge    ####
+[submodule "src/Knowledge/knowledge_bank"]
+	path = src/Knowledge/knowledge_bank
+	url = git@github.com:Biorobotica-UNAM/knowledge_bank.git
+	branch = main
+
 ####    Hardware    ####
 [submodule "src/Hardware/hardware_tools"]
 	path = src/Hardware/hardware_tools
@@ -12,10 +18,6 @@
 [submodule "src/Hardware/justina_description"]
 	path = src/Hardware/justina_description
 	url = git@github.com:Biorobotica-UNAM/justina_description.git
-	branch = main
-[submodule "src/Hardware/base_interfaces"]
-	path = src/Hardware/base_interfaces
-	url = git@github.com:Biorobotica-UNAM/base_interfaces.git
 	branch = main
 [submodule "src/Hardware/base"]
 	path = src/Hardware/base
@@ -120,13 +122,13 @@
 	path = src/Executor/executor_tools
 	url = git@github.com:Biorobotica-UNAM/executor_tools.git
 	branch = main
-[submodule "src/Executor/tasks"]
-	path = src/Executor/tasks
-	url = git@github.com:Biorobotica-UNAM/tasks.git
+[submodule "src/Executor/executor_worker"]
+	path = src/Executor/executor_worker
+	url = git@github.com:Biorobotica-UNAM/executor_worker.git
 	branch = main
-[submodule "src/Executor/task_manager"]
-	path = src/Executor/task_manager
-	url = git@github.com:Biorobotica-UNAM/task_manager.git
+[submodule "src/Executor/executor_manager"]
+	path = src/Executor/executor_manager
+	url = git@github.com:Biorobotica-UNAM/executor_manager.git
 	branch = main
 
 ####    Supervisor    ####
@@ -145,4 +147,8 @@
 [submodule "src/Supervisor/supervisor_system"]
 	path = src/Supervisor/supervisor_system
 	url = git@github.com:Biorobotica-UNAM/supervisor_system.git
+	branch = main
+[submodule "src/Supervisor/supervisor_execution"]
+	path = src/Supervisor/supervisor_execution
+	url = git@github.com:Biorobotica-UNAM/supervisor_execution.git
 	branch = main
