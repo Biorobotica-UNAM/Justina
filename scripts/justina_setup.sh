@@ -21,8 +21,7 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{seria
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A5052R8H", SYMLINK+="leftArm", MODE="0666"
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="A7005LgE", SYMLINK+="rightArm", MODE="0666"
 SUBSYSTEM=="tty", ATTRS{idVendor}=="15d1", ATTRS{idProduct}=="0000", SYMLINK+="lidar", MODE="0666"
-SUBSYSTEM=="tty", ATTRS{idVendor}=="1ffb", ATTRS{idProduct}=="0085", SYMLINK+="torso", MODE="0666"
-EOF
+SUBSYSTEM=="tty", KERNEL=="ttyACM*", ATTRS{idVendor}=="1ffb", ATTRS{idProduct}=="0085", ATTRS{manufacturer}=="Pololu Corporation", ATTRS{product}=="Pololu Jrk 12v12 Motor Controller", ATTRS{bInterfaceNumber}=="00", SYMLINK+="torso", MODE="0666"EOF
 
 # Recargar reglas
 sudo udevadm control --reload-rules

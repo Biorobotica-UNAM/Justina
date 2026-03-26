@@ -155,3 +155,6 @@
 [submodule "src/Vision/vision_tools"]
 	path = src/Vision/vision_tools
 	url = git@github.com:Biorobotica-UNAM/vision_tools.git
+[submodule "src/Executor/tasks"]
+	path = src/Executor/tasks
+	url = git@github.com:Biorobotica-UNAM/tasks.git
