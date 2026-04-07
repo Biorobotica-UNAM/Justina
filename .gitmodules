@@ -3,7 +3,6 @@
 	path = src/Interfaces
 	url = git@github.com:Biorobotica-UNAM/Interfaces.git
 	branch = dev/supervisor_interfaces
-
 ###		Knowledge Bank    ####
 [submodule "src/Knowledge/knowledge_bank"]
 	path = src/Knowledge/knowledge_bank
@@ -22,7 +21,7 @@
 [submodule "src/Hardware/justina_description"]
 	path = src/Hardware/justina_description
 	url = git@github.com:Biorobotica-UNAM/justina_description.git
-	branch = main
+	branch = fix/cleanup
 [submodule "src/Hardware/base"]
 	path = src/Hardware/base
 	url = git@github.com:Biorobotica-UNAM/base.git
@@ -70,6 +69,10 @@
 	path = src/Manipulation/manipulation_planner
 	url = git@github.com:Biorobotica-UNAM/manipulation_planner.git
 	branch = dev/move_it
+[submodule "src/Manipulation/manipulation_controller"]
+	path = src/Manipulation/manipulation_controller
+	url = git@github.com:Biorobotica-UNAM/manipulation_controller.git
+	branch = main
 
 
 ####    HRI    ####
@@ -142,6 +145,11 @@
 [submodule "src/Executor/tasks"]
 	path = src/Executor/tasks
 	url = git@github.com:Biorobotica-UNAM/tasks.git
+	branch = dev/take_sm
+[submodule "src/Executor/tasks_tools"]
+	path = src/Executor/tasks_tools
+	url = git@github.com:Biorobotica-UNAM/tasks_tools.git
+	branch = main
 
 
 ####    Supervisor    ####
