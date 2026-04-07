@@ -45,6 +45,10 @@
 	path = src/Hardware/virtual_envs
 	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
 	branch = main
+[submodule "src/Hardware/joint_states_parser"]
+	path = src/Hardware/joint_states_parser
+	url = git@github.com:Biorobotica-UNAM/joint_states_parser.git
+	branch = main
 
 ####    Navigation    ####
 [submodule "src/Navigation/navigation_tools"]
