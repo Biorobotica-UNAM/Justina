@@ -65,9 +65,11 @@
 [submodule "src/Manipulation/manipulation_tools"]
 	path = src/Manipulation/manipulation_tools
 	url = git@github.com:Biorobotica-UNAM/manipulation_tools.git
+	branch = main
 [submodule "src/Manipulation/manipulation_planner"]
 	path = src/Manipulation/manipulation_planner
 	url = git@github.com:Biorobotica-UNAM/manipulation_planner.git
+	branch = dev/move_it
 
 
 ####    HRI    ####
@@ -82,7 +84,7 @@
 [submodule "src/HRI/talker"]
 	path = src/HRI/talker
 	url = git@github.com:Biorobotica-UNAM/talker.git
-	branch = review/talker
+	branch = talker_piper
 [submodule "src/HRI/human_detector"]
 	path = src/HRI/human_detector
 	url = git@github.com:Biorobotica-UNAM/human_detector.git
@@ -114,11 +116,11 @@
 [submodule "src/Planning/clips"]
 	path = src/Planning/clips
 	url = git@github.com:Biorobotica-UNAM/clips.git
-	branch = dev/rename
+	branch = feat/gpsr-plan
 [submodule "src/Planning/semantic_parser"]
 	path = src/Planning/semantic_parser
 	url = git@github.com:Biorobotica-UNAM/semantic_parser.git
-	branch = main
+	branch = refactor/gpsr-command-interpreter
 
 ####    Executor    ####
 [submodule "src/Executor/executor_tools"]
