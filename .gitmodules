@@ -29,18 +29,18 @@
 [submodule "src/Hardware/arms"]
 	path = src/Hardware/arms
 	url = git@github.com:Biorobotica-UNAM/arms.git
-	branch = main
+	branch = dev/arms_update
 [submodule "src/Hardware/kinect_ros2"]
 	path = src/Hardware/kinect_ros2
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
 [submodule "src/Hardware/head"]
 	path = src/Hardware/head
 	url = git@github.com:Biorobotica-UNAM/head.git
-	branch = main
+	branch = dev/dynamixel_mx_28
 [submodule "src/Hardware/torso"]
 	path = src/Hardware/torso
 	url = git@github.com:Biorobotica-UNAM/torso.git
-	branch = main
+	branch = dev/torso_controller
 [submodule "src/Hardware/virtual_envs"]
 	path = src/Hardware/virtual_envs
 	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
