@@ -33,6 +33,7 @@
 [submodule "src/Hardware/kinect_ros2"]
 	path = src/Hardware/kinect_ros2
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
+	branch = main
 [submodule "src/Hardware/head"]
 	path = src/Hardware/head
 	url = git@github.com:Biorobotica-UNAM/head.git
@@ -81,6 +82,10 @@
 	path = src/Manipulation/move_it
 	url = git@github.com:Biorobotica-UNAM/move_it.git
 	branch = main
+[submodule "src/Manipulation/trac_ik"]
+	path = src/Manipulation/trac_ik
+	url = git@github.com:Biorobotica-UNAM/trac_ik.git
+	branch = jazzy
 
 ####    HRI    ####
 [submodule "src/HRI/hri_tools"]
