@@ -33,7 +33,7 @@
 [submodule "src/Hardware/kinect_ros2"]
 	path = src/Hardware/kinect_ros2
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
-	branch = main
+	branch = galactic
 [submodule "src/Hardware/head"]
 	path = src/Hardware/head
 	url = git@github.com:Biorobotica-UNAM/head.git
