@@ -44,9 +44,14 @@ if ! printenv | grep -q "ROS_DISTRO=jazzy"; then
   exit 1
 fi
 
+chmod +x scripts/justina_on.sh
+echo "alias hardware_on='~/Documents/devJ/Justina/scripts/hardware_on.sh'" >> ~/.bashrc
+
 # Actualizar lista de paquetes
 echo "Actualizando lista de paquetes..."
 sudo apt update
+
+sudo apt-get update && sudo apt-get install -y sshpass
 
 # Instalar dependencias ROS y del sistema
 echo "Instalando dependencias ROS 2 y de sistema..."
@@ -66,6 +71,30 @@ sudo apt install -y \
   nlohmann-json3-dev \
   portaudio19-dev \
   flite
+
+
+# --- Configuración de CycloneDDS y Alias ---
+
+# 1. Mover el archivo XML a la raíz (pide contraseña de sudo)
+echo "Configurando cyclonedds.xml en la raíz..."
+sudo mv cyclonedds.xml /cyclonedds.xml
+sudo chmod 644 /cyclonedds.xml
+
+# 2. Agregar alias al .bashrc solo si no existen ya
+if ! grep -q "alias justina_on=" ~/.bashrc; then
+    echo "Agregando alias justina_on y justina_off a ~/.bashrc..."
+    echo "" >> ~/.bashrc
+    echo "# Justina Robot Aliases" >> ~/.bashrc
+    echo "alias justina_on='export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; export CYCLONEDDS_URI=/cyclonedds.xml; export ROS_DOMAIN_ID=0; export ROS_LOCALHOST_ONLY=0'" >> ~/.bashrc
+    echo "alias justina_off='unset CYCLONEDDS_URI; unset RMW_IMPLEMENTATION; unset ROS_DOMAIN_ID; unset ROS_LOCALHOST_ONLY'" >> ~/.bashrc
+    echo "Alias agregados correctamente."
+else
+    echo "Los alias ya existen en ~/.bashrc, omitiendo paso."
+fi
+
+echo "Configuración terminada. Por favor, corre 'source ~/.bashrc' o abre una nueva terminal."
+
+source ~/.bashrc
 
 cd /tmp
 git clone https://github.com/OpenKinect/libfreenect.git
