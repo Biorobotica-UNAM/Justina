@@ -23,34 +23,10 @@
 	path = src/Hardware/justina_description
 	url = git@github.com:Biorobotica-UNAM/justina_description.git
 	branch = main
-[submodule "src/Hardware/base"]
-	path = src/Hardware/base
-	url = git@github.com:Biorobotica-UNAM/base.git
-	branch = main
-[submodule "src/Hardware/arms"]
-	path = src/Hardware/arms
-	url = git@github.com:Biorobotica-UNAM/arms.git
-	branch = main
 [submodule "src/Hardware/kinect_ros2"]
 	path = src/Hardware/kinect_ros2
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
 	branch = galactic
-[submodule "src/Hardware/head"]
-	path = src/Hardware/head
-	url = git@github.com:Biorobotica-UNAM/head.git
-	branch = main
-[submodule "src/Hardware/torso"]
-	path = src/Hardware/torso
-	url = git@github.com:Biorobotica-UNAM/torso.git
-	branch = main
-[submodule "src/Hardware/virtual_envs"]
-	path = src/Hardware/virtual_envs
-	url = git@github.com:Biorobotica-UNAM/virtual_envs.git
-	branch = main
-[submodule "src/Hardware/joint_states_parser"]
-	path = src/Hardware/joint_states_parser
-	url = git@github.com:Biorobotica-UNAM/joint_states_parser.git
-	branch = main
 
 ####    Navigation    ####
 [submodule "src/Navigation/navigation_tools"]
