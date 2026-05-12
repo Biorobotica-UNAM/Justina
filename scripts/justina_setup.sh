@@ -29,8 +29,11 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 
 echo "Alias creados:"
-echo "  /dev/justinaRightArm"
-echo "  /dev/justinaHead"
+echo "  /dev/head"
+echo "  /dev/leftArm"
+echo "  /dev/rightArm"
+echo "  /dev/lidar"
+echo "  /dev/torso"
 
 ############################################
 # Descarga las dependencias de ROS 2 Jazzy #
@@ -70,7 +73,11 @@ sudo apt install -y \
   espeak-ng \
   nlohmann-json3-dev \
   portaudio19-dev \
-  flite
+  flite \
+  ros-jazzy-moveit-ros-planning-interface \
+  ros-jazzy-moveit \
+  ros-jazzy-ament-lint-auto \
+  ros-jazzy-rmw-cyclonedds-cpp
 
 
 # --- Configuración de CycloneDDS y Alias ---
