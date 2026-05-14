@@ -157,3 +157,7 @@
 	path = src/Supervisor/supervisor_execution
 	url = git@github.com:Biorobotica-UNAM/supervisor_execution.git
 	branch = main
+[submodule "src/Vision/table_alignment"]
+	path = src/Vision/table_alignment
+	url = git@github.com:Biorobotica-UNAM/table_alignment
+	branch = main
