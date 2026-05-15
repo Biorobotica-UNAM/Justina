@@ -144,7 +144,7 @@
 [submodule "src/Supervisor/supervisor_manager"]
 	path = src/Supervisor/supervisor_manager
 	url = git@github.com:Biorobotica-UNAM/supervisor_manager.git
-	branch = main
+	branch = fix/plan_bugs
 [submodule "src/Supervisor/supervisor_plan"]
 	path = src/Supervisor/supervisor_plan
 	url = git@github.com:Biorobotica-UNAM/supervisor_plan.git
