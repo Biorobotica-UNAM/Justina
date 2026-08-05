@@ -194,6 +194,11 @@
 	url = git@github.com:Biorobotica-UNAM/executor_worker.git
 	branch = main
 
+[submodule "src/Executor/gui_controller"]
+	path = src/Executor/gui_controller
+	url = git@github.com:Biorobotica-UNAM/gui_controller.git
+	branch = main
+
 
 #### Supervisor ####
 
