@@ -65,17 +65,21 @@ sudo apt install -y \
   ros-jazzy-nav2-amcl \
   ros-jazzy-xacro \
   ros-jazzy-nav2-lifecycle-manager \
-  ros-jazzy-urg-node \
   ros-jazzy-depth-image-proc \
   ros-jazzy-camera-info-manager \
   ros-jazzy-tf-transformations \
   ros-jazzy-dynamixel-sdk \
+  ros-dev-tools \
+  build-essential \
+  python3-colcon-common-extensions \
   espeak-ng \
   nlohmann-json3-dev \
   portaudio19-dev \
   flite \
   ros-jazzy-moveit-ros-planning-interface \
   ros-jazzy-moveit \
+  ros-jazzy-moveit-setup-assistant \
+  ros-jazzy-moveit-servo \
   ros-jazzy-ament-lint-auto \
   ros-jazzy-rmw-cyclonedds-cpp
 
@@ -113,6 +117,6 @@ sudo make install
 sudo ldconfig
 
 # Instalar dependencias de Python
-pip3 install openai clipspy vosk pyaudio noisereduce --break-system-packages
+pip3 install openai clipspy vosk pyaudio noisereduce dynamixel-sdk --break-system-packages
 
 echo "Instalación completada correctamente."
