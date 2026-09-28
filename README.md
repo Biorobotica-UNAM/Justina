@@ -23,3 +23,14 @@ chmod +x scripts/install_ros2_packages.sh
 ```bash
 bash scripts/install_ros2_packages.sh
 ```
+# Troubleshooting
+In case the known locations don't appear in the map, when launched. Add the following lines to _.bashrc_:
+```bash
+export JUSTINA_WS="$HOME/biorobotica-unam/Justina"
+
+source /opt/ros/jazzy/setup.bash
+source "$JUSTINA_WS/install/setup.bash"
+
+export PYTHONPATH="$JUSTINA_WS/src/Navigation/navigation_controller/locations_manager:$PYTHONPATH"
+```
+and source it.
