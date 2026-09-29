@@ -3,9 +3,9 @@
 # Script para instalar dependencias ROS 2 Jazzy y crear alias de dispositivos
 # ===========================================================================
 
-########################################
-# Crea alias para el brazo y la cabeza #
-########################################
+##########################################
+# Crea alias para los brazos y la cabeza #
+##########################################
 
 echo "Creando alias de udev para las tarjetas de Justina..."
 
