@@ -226,3 +226,7 @@
 	path = src/Supervisor/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
 	branch = main
+[submodule "src/Hardware/justina_sim"]
+	path = src/Hardware/justina_sim
+	url = https://github.com/Biorobotica-UNAM/justina_sim.git
+	branch = main
