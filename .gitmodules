@@ -62,7 +62,7 @@
 [submodule "src/Navigation/navigation_planner"]
 	path = src/Navigation/navigation_planner
 	url = git@github.com:Biorobotica-UNAM/navigation_planner.git
-	branch = lab_2026
+	branch = main
 
 [submodule "src/Navigation/navigation_controller"]
 	path = src/Navigation/navigation_controller
@@ -182,7 +182,7 @@
 [submodule "src/Executor/executor_tools"]
 	path = src/Executor/executor_tools
 	url = git@github.com:Biorobotica-UNAM/executor_tools.git
-	branch = pilot
+	branch = main
 
 [submodule "src/Executor/executor_manager"]
 	path = src/Executor/executor_manager
@@ -205,17 +205,17 @@
 [submodule "src/Supervisor/supervisor_manager"]
 	path = src/Supervisor/supervisor_manager
 	url = git@github.com:Biorobotica-UNAM/supervisor_manager.git
-	branch = pilot
+	branch = main
 
 [submodule "src/Supervisor/supervisor_plan"]
 	path = src/Supervisor/supervisor_plan
 	url = git@github.com:Biorobotica-UNAM/supervisor_plan.git
-	branch = pilot
+	branch = main
 
 [submodule "src/Supervisor/supervisor_execution"]
 	path = src/Supervisor/supervisor_execution
 	url = git@github.com:Biorobotica-UNAM/supervisor_execution.git
-	branch = pilot
+	branch = main
 
 [submodule "src/Supervisor/supervisor_system"]
 	path = src/Supervisor/supervisor_system
