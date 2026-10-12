@@ -106,7 +106,7 @@ build() {
                 fi
             done
         fi
-    done < <(find "${WS_ROOT}/src" -mindepth 2 -maxdepth 2 -type d -regextype posix-extended -iregex ".*/${VENV_DIRNAME_PATTERN}" -print0)
+    done < <(find "${WS_ROOT}/src" -mindepth 2 -maxdepth 6 -type d -regextype posix-extended -iregex ".*/${VENV_DIRNAME_PATTERN}" -print0)
 
     echo ""
     echo "Packages built with their own venv: ${venv_packages[*]:-(none found)}"
