@@ -53,7 +53,7 @@
 
 [submodule "src/Hardware/justina_sim"]
 	path = src/Hardware/justina_sim
-	url = https://github.com/Biorobotica-UNAM/justina_sim.git
+	url = git@github.com:Biorobotica-UNAM/justina_sim.git
 	branch = main
 
 
@@ -67,12 +67,12 @@
 [submodule "src/Navigation/navigation_planner"]
 	path = src/Navigation/navigation_planner
 	url = git@github.com:Biorobotica-UNAM/navigation_planner.git
-	branch = main
+	branch = lab_2026
 
 [submodule "src/Navigation/navigation_controller"]
 	path = src/Navigation/navigation_controller
 	url = git@github.com:Biorobotica-UNAM/navigation_controller.git
-	branch = main
+	branch = lab_2026
 
 [submodule "src/Navigation/mapless_navigation"]
 	path = src/Navigation/mapless_navigation
@@ -187,7 +187,7 @@
 [submodule "src/Executor/executor_tools"]
 	path = src/Executor/executor_tools
 	url = git@github.com:Biorobotica-UNAM/executor_tools.git
-	branch = main
+	branch = pilot
 
 [submodule "src/Executor/executor_manager"]
 	path = src/Executor/executor_manager
@@ -210,17 +210,17 @@
 [submodule "src/Supervisor/supervisor_manager"]
 	path = src/Supervisor/supervisor_manager
 	url = git@github.com:Biorobotica-UNAM/supervisor_manager.git
-	branch = main
+	branch = pilot
 
 [submodule "src/Supervisor/supervisor_plan"]
 	path = src/Supervisor/supervisor_plan
 	url = git@github.com:Biorobotica-UNAM/supervisor_plan.git
-	branch = main
+	branch = pilot
 
 [submodule "src/Supervisor/supervisor_execution"]
 	path = src/Supervisor/supervisor_execution
 	url = git@github.com:Biorobotica-UNAM/supervisor_execution.git
-	branch = main
+	branch = pilot
 
 [submodule "src/Supervisor/supervisor_system"]
 	path = src/Supervisor/supervisor_system
