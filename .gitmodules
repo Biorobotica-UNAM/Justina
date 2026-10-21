@@ -51,6 +51,9 @@
 	url = git@github.com:Biorobotica-UNAM/kinect_ros2.git
 	branch = galactic
 
+[submodule "src/Hardware/justina_sim"]
+	path = src/Hardware/justina_sim
+	url = git@github.com:Biorobotica-UNAM/justina_sim.git
 
 #### Navigation ####
 
@@ -226,3 +229,4 @@
 	path = src/Supervisor/surge_et_ambula
 	url = git@github.com:Biorobotica-UNAM/surge_et_ambula.git
 	branch = main
+
